@@ -3,12 +3,12 @@
 # and open the template in the editor.
 from odoo import models, fields
 
-class  TeacherCourseSubject(models.Model):
-    
-    _name='maz_solutions.TeacherCourseSubject'
+class CourseSubject (models.Model):
 
-    totalHours=fields.Float()
+    _name='maz_solutions.CourseSubject'
+    
+    course=fields.Many2One('maz_solutions.Course',string="Course")
     
     subject=fields.Many2One('maz_solutions.Subject',string="Subject")
     
-    teacherCourse=fields.Many2One('maz_solutions.TeacherCourse',string="TeacherCourse")
+    

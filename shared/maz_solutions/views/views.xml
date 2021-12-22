@@ -40,9 +40,7 @@
     -->
 
     <!-- Top menu item -->
-    <!--
     <menuitem name="maz_solutions" id="maz_solutions.menu_root"/>
-    -->
     <!-- menu categories -->
     <!--
     <menuitem name="Menu 1" id="maz_solutions.menu_1" parent="maz_solutions.menu_root"/>

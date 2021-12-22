@@ -3,9 +3,10 @@
 # and open the template in the editor.
 
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import models, fields
+
 class User(models.Model):
-    _name= 'Res.User'
+    _inherit= 'res.user'
     birthDate=fields.Date()
     status= fields.Selection(PRIVILEGE_SELECTION)
     PRIVILEGE_SELECTION = [
