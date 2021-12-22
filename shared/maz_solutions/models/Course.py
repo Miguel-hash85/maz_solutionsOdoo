@@ -9,8 +9,8 @@ class  Course(models.Model):
     name=fields.Char   
     dateStart=fields.Date()
     dateEnd=fields.Date()
-    courseSubjects=fields.One2Many('maz_solutions.CourseSubject','subject',string="CourseSubjects")
-    students=fields.One2Many('maz_solutions.Student','Student',string="Students")
+#    courseSubjects=fields.One2Many('maz_solutions.CourseSubject','subject',string="CourseSubjects")
+#    students=fields.One2Many('maz_solutions.Student','Student',string="Students")
     
 
 

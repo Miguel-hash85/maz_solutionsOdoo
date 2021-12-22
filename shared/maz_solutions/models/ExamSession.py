@@ -11,8 +11,8 @@ class ExamSession (models.Model):
     
     dateTimeEnd=fields.Datetime()
     
-    student=fields.Many2one('maz_solutions.Student', string="Student")
+#    student=fields.Many2one('maz_solutions.Student', string="Student")
     
-    exam=fields.Many2One('maz_solutions.Exam', string="Exam")
+#    exam=fields.Many2One('maz_solutions.Exam', string="Exam")
     
     mark=fields.Integer()

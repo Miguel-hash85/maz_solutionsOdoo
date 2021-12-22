@@ -12,9 +12,9 @@ class  TeacherCourse(models.Model):
     
     dateEnd=fields.Date()
     
-    teacher=fields.Many2One('maz_solutions.Teacher',string="Teacher")
+  #  teacher=fields.Many2One('maz_solutions.Teacher',string="Teacher")
     
-    subjects=fields.One2Many('maz_solutions.Subject',teacherCourse,string="Subjects")
+  #  subjects=fields.One2Many('maz_solutions.Subject',teacherCourse,string="Subjects")
     
     
    

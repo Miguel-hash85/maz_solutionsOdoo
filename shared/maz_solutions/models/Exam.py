@@ -9,6 +9,6 @@ class Exam (models.Model):
     
     statment=fields.Text()
     
-    subject=fields.Many2One('maz_solutions.Subject', string="Subject")
+#    subject=fields.Many2One('maz_solutions.Subject', string="Subject")
     
-    examSessions=fields.One2Many('maz_solutions.ExamSession','Exam', string="ExamSessions")
+#    examSessions=fields.One2Many('maz_solutions.ExamSession','Exam', string="ExamSessions")

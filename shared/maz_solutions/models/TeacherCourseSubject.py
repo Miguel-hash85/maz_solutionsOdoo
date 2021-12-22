@@ -9,6 +9,6 @@ class  TeacherCourseSubject(models.Model):
 
     totalHours=fields.Float()
     
-    subject=fields.Many2One('maz_solutions.Subject',string="Subject")
+   # subject=fields.Many2One('maz_solutions.Subject',string="Subject")
     
-    teacherCourse=fields.Many2One('maz_solutions.TeacherCourse',string="TeacherCourse")
+   # teacherCourse=fields.Many2One('maz_solutions.TeacherCourse',string="TeacherCourse")

@@ -11,4 +11,4 @@ class Teacher (models.Model):
     
     salary=fields.Float()
     
-    teacherCourses=fields.One2Many('maz_solutions.TeacherCourse','Teacher',string="Teacher Course")
+   # teacherCourses=fields.One2Many('maz_solutions.TeacherCourse','Teacher',string="Teacher Course")

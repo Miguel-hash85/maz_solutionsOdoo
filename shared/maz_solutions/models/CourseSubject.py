@@ -7,8 +7,8 @@ class CourseSubject (models.Model):
 
     _name='maz_solutions.CourseSubject'
     
-    course=fields.Many2One('maz_solutions.Course',string="Course")
+#    course=fields.Many2One('maz_solutions.Course',string="Course")
     
-    subject=fields.Many2One('maz_solutions.Subject',string="Subject")
+#    subject=fields.Many2One('maz_solutions.Subject',string="Subject")
     
     

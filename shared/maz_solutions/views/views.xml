@@ -42,10 +42,9 @@
     <!-- Top menu item -->
     <menuitem name="maz_solutions" id="maz_solutions.menu_root"/>
     <!-- menu categories -->
-    <!--
+    
     <menuitem name="Menu 1" id="maz_solutions.menu_1" parent="maz_solutions.menu_root"/>
     <menuitem name="Menu 2" id="maz_solutions.menu_2" parent="maz_solutions.menu_root"/>
-    -->
     <!-- actions -->
     <!--
     <menuitem name="List" id="maz_solutions.menu_1_list" parent="maz_solutions.menu_1"

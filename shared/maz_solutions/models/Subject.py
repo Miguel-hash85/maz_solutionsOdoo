@@ -11,11 +11,11 @@ class  Subject(models.Model):
     
     password=fields.Char()
     
-    teacherCourseSubjects=fields.One2Many('maz_solutions.TeacherCourseSubject','Subject',string="TeacherCourseSubjects")
+ #   teacherCourseSubjects=fields.One2Many('maz_solutions.TeacherCourseSubject','Subject',string="TeacherCourseSubjects")
     
-    exams=fields.One2Many('maz_solutions.Exam','subject',string="Exams")
+ #   exams=fields.One2Many('maz_solutions.Exam','subject',string="Exams")
     
-    courseSubjects=fields.One2Many('maz_solutions.CourseSubject','subject',string="CourseSubjects")
+ #   courseSubjects=fields.One2Many('maz_solutions.CourseSubject','subject',string="CourseSubjects")
     
     
     
