@@ -6,14 +6,15 @@
 from odoo import models, fields
 
 class User(models.Model):
-    _inherit= 'res.user'
+    _inherit='res.users'
     birthDate=fields.Date()
-    status= fields.Selection(PRIVILEGE_SELECTION)
     PRIVILEGE_SELECTION = [
         ('0', 'USER'),
         ('1', 'ADMIN'),
         ('2', 'STUDENT'),
         ('3', 'TEACHER'),
     ]
+    status= fields.Selection(PRIVILEGE_SELECTION)
+   
 
 

@@ -5,10 +5,10 @@ from odoo import models, fields
 
 class CourseSubject (models.Model):
 
-    _name='maz_solutions.CourseSubject'
+    _name='maz_solutions.course_subject'
     
-#    course=fields.Many2One('maz_solutions.Course',string="Course")
+    course=fields.Many2one('maz_solutions.course',string="Course")
     
-#    subject=fields.Many2One('maz_solutions.Subject',string="Subject")
+    subject=fields.Many2one('maz_solutions.subject',string="Subject")
     
     

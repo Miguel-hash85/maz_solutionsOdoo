@@ -5,12 +5,12 @@ from odoo import models, fields
 
 class  Course(models.Model):
    
-    _name='maz_solutions.Course'
+    _name='maz_solutions.course'
     name=fields.Char   
     dateStart=fields.Date()
     dateEnd=fields.Date()
-#    courseSubjects=fields.One2Many('maz_solutions.CourseSubject','subject',string="CourseSubjects")
-#    students=fields.One2Many('maz_solutions.Student','Student',string="Students")
+    course_subject=fields.One2many('maz_solutions.course_subject','course',string="Course Subject")
+    students=fields.One2many('maz_solutions.student','course',string="Student")
     
 
 

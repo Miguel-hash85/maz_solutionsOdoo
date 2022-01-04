@@ -4,7 +4,7 @@
 from odoo import models, fields
 
 class  TeacherCourse(models.Model):
-    _name='maz_solutions.TeacherCourse'
+    _name='maz_solutions.teacher_course'
      
     name=fields.Char()
     
@@ -12,9 +12,7 @@ class  TeacherCourse(models.Model):
     
     dateEnd=fields.Date()
     
-  #  teacher=fields.Many2One('maz_solutions.Teacher',string="Teacher")
+    teacher=fields.Many2one('maz_solutions.teacher',string="Teacher")
     
-  #  subjects=fields.One2Many('maz_solutions.Subject',teacherCourse,string="Subjects")
-    
-    
+    teacher_course_subject=fields.One2many('maz_solutions.teacher_course_subject','teacher_course',string="Teacher Course Subject")
    

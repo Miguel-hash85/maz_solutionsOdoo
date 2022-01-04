@@ -5,17 +5,17 @@ from odoo import models, fields
 
 class  Subject(models.Model):
    
-    _name='maz_solutions.Subject'
+    _name='maz_solutions.subject'
      
     name=fields.Char()
     
     password=fields.Char()
     
- #   teacherCourseSubjects=fields.One2Many('maz_solutions.TeacherCourseSubject','Subject',string="TeacherCourseSubjects")
+    teacher_course_subjects=fields.One2many('maz_solutions.teacher_course_subject','subject',string="Teacher Course Subjects")
     
- #   exams=fields.One2Many('maz_solutions.Exam','subject',string="Exams")
+    exams=fields.One2many('maz_solutions.exam','subject',string="Exams")
     
- #   courseSubjects=fields.One2Many('maz_solutions.CourseSubject','subject',string="CourseSubjects")
+    course_subjects=fields.One2many('maz_solutions.course_subject','subject',string="Course Subjects")
     
     
     

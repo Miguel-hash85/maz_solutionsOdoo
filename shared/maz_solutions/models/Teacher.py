@@ -5,10 +5,10 @@ from odoo import models, fields
 
 class Teacher (models.Model):
     
-    _inherit='res.user'
+    _inherit='res.users'
     
-    _name='maz_solutions.Teacher'
+    _name='maz_solutions.teacher'
     
     salary=fields.Float()
     
-   # teacherCourses=fields.One2Many('maz_solutions.TeacherCourse','Teacher',string="Teacher Course")
+    teacher_courses=fields.One2many('maz_solutions.teacher_course','teacher',string="Teacher Course")

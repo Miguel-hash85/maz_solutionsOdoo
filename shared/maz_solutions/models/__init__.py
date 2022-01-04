@@ -5,9 +5,9 @@ from . import Course
 from . import CourseSubject
 from . import Exam
 from . import ExamSession
-from . import Student
 from . import Subject
 from . import Teacher
+from . import Student
 from . import TeacherCourse
 from . import TeacherCourseSubject
 from . import User

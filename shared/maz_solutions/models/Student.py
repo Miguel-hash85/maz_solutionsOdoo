@@ -5,10 +5,10 @@ from odoo import models, fields
 
 class  Student(models.Model):
    
-    _name= 'maz_solutions.Student'
-    _inherit= 'maz_solutions.user'
+    _name= 'maz_solutions.student'
+    _inherit='res.users'
     year=fields.Date()
-#    sessions=fields.One2Many('maz_solutions.sessions','examSession',string="Sessions")
-#    course=fields.Many2One('maz_solutions.Course',string="Course")
+    sessions=fields.One2many('maz_solutions.exam_session','student',string="Exam Sessions")
+    course=fields.Many2one('maz_solutions.course',string="Course")
 
 
