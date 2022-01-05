@@ -5,14 +5,14 @@ from odoo import models, fields
 
 class ExamSession (models.Model):
     
-    _name='maz_solutions.ExamSession'
+    _name='maz_solutions.exam_session'
     
     dateTimeStart=fields.Datetime()
     
     dateTimeEnd=fields.Datetime()
     
-    student=fields.Many2one('maz_solutions.Student', string="Student")
+    student=fields.Many2one('maz_solutions.student', string="Student")
     
-    exam=fields.Many2One('maz_solutions.Exam', string="Exam")
+    exam=fields.Many2one('maz_solutions.exam', string="Exam")
     
     mark=fields.Integer()

@@ -1,13 +1,14 @@
 # To change this license header, choose License Headers in Project Properties.
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
+from odoo import models, fields
 
 class  Student(models.Model):
    
-    _name= 'Res.Student'
-    _inherit= 'Res.User'
+    _name= 'maz_solutions.student'
+    _inherit='res.users'
     year=fields.Date()
-    sessions=fields.One2Many('maz_solutions.sessions','examSession',string="Sessions")
-    Course=fields.Many2One('maz_solutions.Course',string="Course")
+    sessions=fields.One2many('maz_solutions.exam_session','student',string="Exam Sessions")
+    course=fields.Many2one('maz_solutions.course',string="Course")
 
 

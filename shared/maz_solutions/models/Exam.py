@@ -5,10 +5,10 @@ from odoo import models, fields
 
 class Exam (models.Model):
     
-    _name='maz_solutions.Exam'
+    _name='maz_solutions.exam'
     
     statment=fields.Text()
     
-    subject=fields.Many2One('maz_solutions.Subject', string="Subject")
-    
-    examSessions=fields.One2Many('maz_solutions.ExamSession','Exam', string="ExamSessions")
+    subject=fields.Many2one('maz_solutions.subject', string="Subject")
+  
+    exam_sessions=fields.One2many('maz_solutions.exam_session','exam', string="ExamSessions")
