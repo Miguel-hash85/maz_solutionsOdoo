@@ -31,6 +31,18 @@
             <field name="res_model">maz_solutions.teacher_course</field>
             <field name="view_mode">tree,form</field>
         </record>
+        
+        <record model="ir.actions.act_window" id="maz_solutions.student_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="maz_solutions.course_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
         <!-- server action to the one above -->
         <!--
@@ -59,6 +71,10 @@
                   action="maz_solutions.teacher_window"/>
         <menuitem name="Teacher Course" id="maz_solutions.menu_teacher_course_list" parent="maz_solutions.admin"
                   action="maz_solutions.teacher_course_window"/>
+        <menuitem name="Student" id="maz_solutions.menu_student_list" parent="maz_solutions.admin"
+                  action="maz_solutions.student_window"/>
+        <menuitem name="Course" id="maz_solutions.menu_course_list" parent="maz_solutions.admin"
+                  action="maz_solutions.course_window"/>
         <!--
 <menuitem name="Server to list" id="maz_solutions" parent="maz_solutions.menu_2"
         action="maz_solutions.action_server"/>-->
