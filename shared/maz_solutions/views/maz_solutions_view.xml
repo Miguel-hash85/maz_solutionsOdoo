@@ -1,50 +1,66 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-   <!-- 
-    <record model="ir.ui.view" id="maz_solutions.list">
-      <field name="name">maz_solutions list</field>
-      <field name="model">maz_solutions.student</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="year"/>
-        </tree>
-      </field>
-    </record>
-    -->
-    <!-- actions opening views on models -->
+    <data>
+        <!-- explicit list view definition -->
+        <!-- 
+        <record model="ir.ui.view" id="maz_solutions.list">
+          <field name="name">maz_solutions list</field>
+          <field name="model">maz_solutions.student</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="year"/>
+            </tree>
+          </field>
+        </record>
+        -->
+        <!-- actions opening views on models -->
     
-    <record model="ir.actions.act_window" id="maz_solutions.action_window">
-      <field name="name">maz_solutions window</field>
-      <field name="res_model">res.users</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="maz_solutions.action_server">
-      <field name="name">maz_solutions server</field>
-      <field name="model_id" ref="model_maz_solutions_maz_solutions"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>-->
-
-    <!-- Top menu item -->
-    <menuitem name="maz_solutions" id="maz_solutions.menu_root"/>
-    <!-- menu categories -->
-    <menuitem name="MAZ SOLUTIONS" id="maz_solutions.menu_1" parent="maz_solutions.menu_root"/>
-    <!-- actions -->
-    <menuitem name="ADMIN" id="maz_solutions.admin" parent="maz_solutions.menu_1"/>
+        <record model="ir.actions.act_window" id="maz_solutions.action_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.subject</field>
+            <field name="view_mode">tree,form</field>
+        </record>
     
-    <menuitem name="Subject" id="maz_solutions.menu_subject_list" parent="maz_solutions.admin"
-              action="maz_solutions.action_window"/>
-    <!--
-    <menuitem name="Server to list" id="maz_solutions" parent="maz_solutions.menu_2"
-              action="maz_solutions.action_server"/>-->
-  </data>
+        <record model="ir.actions.act_window" id="maz_solutions.teacher_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.teacher</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <record model="ir.actions.act_window" id="maz_solutions.teacher_course_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.teacher_course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="maz_solutions.action_server">
+          <field name="name">maz_solutions server</field>
+          <field name="model_id" ref="model_maz_solutions_maz_solutions"/>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>-->
+
+        <!-- Top menu item -->
+        <menuitem name="maz_solutions" id="maz_solutions.menu_root"/>
+        <!-- menu categories -->
+        <menuitem name="MAZ SOLUTIONS" id="maz_solutions.menu_1" parent="maz_solutions.menu_root"/>
+        <!-- actions -->
+        <menuitem name="ADMIN" id="maz_solutions.admin" parent="maz_solutions.menu_1"/>
+    
+        <menuitem name="Subject" id="maz_solutions.menu_subject_list" parent="maz_solutions.admin"
+                  action="maz_solutions.action_window"/>
+        <menuitem name="Teacher" id="maz_solutions.menu_teacher_list" parent="maz_solutions.admin"
+                  action="maz_solutions.teacher_window"/>
+        <menuitem name="Teacher Course" id="maz_solutions.menu_teacher_course_list" parent="maz_solutions.admin"
+                  action="maz_solutions.teacher_course_window"/>
+        <!--
+<menuitem name="Server to list" id="maz_solutions" parent="maz_solutions.menu_2"
+        action="maz_solutions.action_server"/>-->
+    </data>
 </odoo>
