@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="admin_teacher_view">
+            <field name="name">admin_teacher_view.form.inherit</field>
+            <field name="model">maz_solutions.teacher</field>
+            <field name="mode">primary</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <field name="email" position="after">
+                    <group>
+                        <field name="salary"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
