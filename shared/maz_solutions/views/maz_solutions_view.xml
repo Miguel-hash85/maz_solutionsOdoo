@@ -39,6 +39,16 @@
         <record model="ir.actions.act_window" id="maz_solutions.exam_session_window">
             <field name="name">maz_solutions window</field>
             <field name="res_model">maz_solutions.exam_session</field>
+        </record>
+        <record model="ir.actions.act_window" id="maz_solutions.student_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="maz_solutions.course_window">
+            <field name="name">maz_solutions window</field>
+            <field name="res_model">maz_solutions.course</field>
             <field name="view_mode">tree,form</field>
         </record>
 
@@ -73,8 +83,12 @@
    
         <menuitem name="Exam" id="maz_solutions.exam" parent="maz_solutions.teacher" action="maz_solutions.exam_window"/>
         <menuitem name="Exam Sessions" id="maz_solutions.examSessions" parent="maz_solutions.teacher" action="maz_solutions.exam_session_window"/>
+        <menuitem name="Student" id="maz_solutions.menu_student_list" parent="maz_solutions.admin"
+                  action="maz_solutions.student_window"/>
+        <menuitem name="Course" id="maz_solutions.menu_course_list" parent="maz_solutions.admin"
+                  action="maz_solutions.course_window"/>
         <!--
-<menuitem name="Server to list" id="maz_solutions" parent="maz_solutions.menu_2"
+        <menuitem name="Server to list" id="maz_solutions" parent="maz_solutions.menu_2"
         action="maz_solutions.action_server"/>-->
     </data>
 </odoo>
