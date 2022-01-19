@@ -19,5 +19,19 @@ and open the template in the editor.
                 </field>
             </field>
         </record>
+        <record model="ir.ui.view" id="admin_teacher_list_view">
+            <field name="name">admin_teacher_view.form.inherit</field>
+            <field name="model">maz_solutions.teacher</field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <tree string="Teacher List">
+                    <field name="name"/>
+                    <field name="login"/>
+                    <field name="email"/>
+                    <field name="birthDate"/>
+                    <field name="salary"/>
+                </tree>
+            </field>
+        </record>  
     </data>
 </odoo>

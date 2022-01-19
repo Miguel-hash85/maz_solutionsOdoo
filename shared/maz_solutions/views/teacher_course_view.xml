@@ -33,5 +33,17 @@ and open the template in the editor.
                 </form>
             </field>
         </record>
+        <record model="ir.ui.view" id="teacher_course_tree_view">
+            <field name="name">maz_solutions_teacher_course.list</field>
+            <field name="model">maz_solutions.teacher_course</field>
+            <field name="arch" type="xml">
+                <tree string="Teacher Course List">
+                    <field name="name"/>
+                    <field name="teacher"/>
+                    <field name="dateStart"/>
+                    <field name="dateEnd"/>
+                </tree>
+            </field> 
+        </record>
     </data>
 </odoo>
