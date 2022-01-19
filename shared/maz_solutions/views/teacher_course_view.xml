@@ -18,8 +18,8 @@ and open the template in the editor.
                             <h1>Teacher Course Creation</h1>    
                             <group>
                                 <field name="name"/>
-                                <field name="dateStart"/>
-                                <field name="dateEnd"/>
+                                <field name="date_Start"/>
+                                <field name="date_End"/>
                                 <field name="teacher"/>
                             </group>        
                         </group>
@@ -40,8 +40,8 @@ and open the template in the editor.
                 <tree string="Teacher Course List">
                     <field name="name"/>
                     <field name="teacher"/>
-                    <field name="dateStart"/>
-                    <field name="dateEnd"/>
+                    <field name="date_Start"/>
+                    <field name="date_End"/>
                 </tree>
             </field> 
         </record>
