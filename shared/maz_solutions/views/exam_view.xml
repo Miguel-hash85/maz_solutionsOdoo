@@ -18,13 +18,11 @@ and open the template in the editor.
                             <h1>Exam Creation</h1>    
                             <group>
                                 <field name="statment"/>
+                                <field name="subject"/>
                             </group>        
                         </group>
                        
                         <notebook>
-                            <page string="Subject">
-                                <field name="subject"/>
-                            </page>
                             <page string="Exam Session">
                                 <field name="exam_sessions"/>
                             </page>

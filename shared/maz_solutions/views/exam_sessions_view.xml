@@ -17,20 +17,13 @@ and open the template in the editor.
                         <group colspan="2" col="2">
                             <h1>Exam Session Creation</h1>    
                             <group>
+                                 <field name="exam"/>
+                                 <field name="student"/>
                                 <field name="dateTimeStart"/>
                                 <field name="dateTimeEnd"/>
                                 <field name="mark"/>
                             </group>        
                         </group>
-                       
-                        <notebook>
-                            <page string="Exam">
-                                <field name="exam"/>
-                            </page>
-                            <page string="Student">
-                                <field name="student"/>
-                            </page>
-                        </notebook>
                     </sheet>
                 </form>
             </field>
