@@ -6,7 +6,7 @@ from odoo import models, fields
 class  Course(models.Model):
    
     _name='maz_solutions.course'
-    name=fields.Char   
+    name=fields.Char()   
     dateStart=fields.Date()
     dateEnd=fields.Date()
     course_subject=fields.One2many('maz_solutions.course_subject','course',string="Course Subject")

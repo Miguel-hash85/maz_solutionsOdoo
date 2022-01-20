@@ -35,6 +35,9 @@
         # 'security/ir.model.access.csv',
         'views/maz_solutions_view.xml',
         'views/templates.xml',
+        'views/subject_view.xml',
+        'views/admin_teacher_view.xml',
+        'views/teacher_course_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
