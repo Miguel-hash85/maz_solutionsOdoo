@@ -35,6 +35,8 @@
         # 'security/ir.model.access.csv',
         'views/maz_solutions_view.xml',
         'views/templates.xml',
+        'views/admin_student_view.xml',
+        'views/admin_course_view.xml',
         'views/subject_view.xml',
         'views/admin_teacher_view.xml',
         'views/teacher_course_view.xml',

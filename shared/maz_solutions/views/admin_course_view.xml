@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="course_form_view">
+            <field name="name">maz_solutions_course.form</field>
+            <field name="model">maz_solutions.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group colspan="2" col="2">
+                            <h1>Course Creation</h1>    
+                            <group>
+                                <field name="name"/>
+                                <field name="dateStart"/>
+                                <field name="dateEnd"/>
+                            </group>   
+                            <notebook>
+                                <page string="Students">
+                                    <field name="students"/>
+                                </page>
+                            </notebook>
+                        </group>                       
+                        <notebook>
+                            <page string="Course Subjects">
+                                <field name="course_subject"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">maz_solutions_course.list</field>
+            <field name="model">maz_solutions.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course List">
+                    <field name="name"/>
+                    <field name="dateStart"/>
+                    <field name="dateEnd"/>
+                </tree>
+            </field> 
+        </record>
+    </data>
+</odoo>
