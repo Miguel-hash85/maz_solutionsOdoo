@@ -10,5 +10,11 @@ class  Student(models.Model):
     year=fields.Date()
     sessions=fields.One2many('maz_solutions.exam_session','student',string="Exam Sessions")
     course=fields.Many2one('maz_solutions.course',string="Course")
+    
+    @api.constrains('year')
+    def _check_something(self):
+        for record in self:
+            if record.year > date.today():
+                raise ValidationError("Incorrect year")
 
 
