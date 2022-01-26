@@ -17,7 +17,7 @@ and open the template in the editor.
                         <group colspan="2" col="2">
                             <h1>Exam Creation</h1>    
                             <group>
-                                <field name="statment"/>
+                                <field name="statement"/>
                                 <field name="subject"/>
                             </group>        
                         </group>

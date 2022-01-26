@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<odoo>
+    <data>
+        <report
+            id="project_tasks"
+            model="maz_solutions.teacher"
+            string="Admin Teacher Report"
+            report_type="qweb-pdf"
+            name="maz_solutions.admin_teacher_report"
+            file="maz_solutions.admin_teacher_report"
+        />
+        <template id="admin_teacher_report">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="teacher">
+                    <t t-call="report.external_layout">
+                        <span t-field="teacher.name"/>
+                        <span t-field="teacher.salary"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
