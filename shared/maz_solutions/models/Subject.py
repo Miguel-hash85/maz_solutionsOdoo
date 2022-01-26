@@ -9,7 +9,7 @@ class  Subject(models.Model):
      
     name=fields.Char()
     
-    password=fields.Char()
+    total_hours=fields.Float()
     
     teacher_course_subjects=fields.One2many('maz_solutions.teacher_course_subject','subject',string="Teacher Course Subjects")
     

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="teacher_course_form_view">
+            <field name="name">maz_solutions_teacher_course.form</field>
+            <field name="model">maz_solutions.teacher_course</field>
+            <field name="arch" type="xml">
+                <form string="Teacher Course Form">
+                    <sheet>
+                        <group colspan="2" col="2">
+                            <h1>Teacher Course Creation</h1>    
+                            <group>
+                                <field name="name"/>
+                                <field name="date_Start"/>
+                                <field name="date_End"/>
+                                <field name="teacher"/>
+                            </group>        
+                        </group>
+                       
+                        <notebook>
+                            <page string="Teacher Course Subjects">
+                                <field name="teacher_course_subject"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="teacher_course_tree_view">
+            <field name="name">maz_solutions_teacher_course.list</field>
+            <field name="model">maz_solutions.teacher_course</field>
+            <field name="arch" type="xml">
+                <tree string="Teacher Course List">
+                    <field name="name"/>
+                    <field name="teacher"/>
+                    <field name="date_Start"/>
+                    <field name="date_End"/>
+                </tree>
+            </field> 
+        </record>
+    </data>
+</odoo>

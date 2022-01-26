@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="subject_form_view">
+            <field name="name">maz_solutions_subject.form</field>
+            <field name="model">maz_solutions.subject</field>
+            <field name="arch" type="xml">
+                <form string="Subject Form">
+                    <sheet>
+                        <group colspan="2" col="2">
+                            <h1>Subject Creation</h1>    
+                            <group>
+                                <field name="name"/>
+                                <field name="total_hours"/>
+                            </group>        
+                        </group>
+                       
+                        <notebook>
+                            <page string="Exams">
+                                <field name="exams">
+                                    <tree>
+                                        <field name="statement"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Teacher Course">
+                                <field name="teacher_course_subjects">
+                                    <field name="teacher_course">
+                                        <tree>
+                                            <field name="name"/>
+                                        </tree>
+                                    </field>
+                                </field>
+                            </page>
+                            <page string="Course">
+                                <field name="course_subjects">
+                                    <field name="course">
+                                        <tree>
+                                            <field name="name"/> 
+                                        </tree>
+                                    </field>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="subject_tree_view">
+            <field name="name">maz_solutions_subject.tree</field>
+            <field name="model">maz_solutions.subject</field>
+            <field name="arch" type="xml">
+                <tree string="Subject List">
+                    <field name="name"/>
+                    <field name="total_hours"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

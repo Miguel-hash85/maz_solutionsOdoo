@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="exam_form_view">
+            <field name="name">maz_solutions_exam.form</field>
+            <field name="model">maz_solutions.exam</field>
+            <field name="arch" type="xml">
+                <form string="Exam Form">
+                    <sheet>
+                        <group colspan="2" col="2">
+                            <h1>Exam Creation</h1>    
+                            <group>
+                                <field name="statment"/>
+                                <field name="subject"/>
+                            </group>        
+                        </group>
+                       
+                        <notebook>
+                            <page string="Exam Session">
+                                <field name="exam_sessions"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

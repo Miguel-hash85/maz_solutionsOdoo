@@ -8,9 +8,9 @@ class  TeacherCourse(models.Model):
      
     name=fields.Char()
     
-    dateStart=fields.Date()
+    date_Start=fields.Date()
     
-    dateEnd=fields.Date()
+    date_End=fields.Date()
     
     teacher=fields.Many2one('maz_solutions.teacher',string="Teacher")
     
