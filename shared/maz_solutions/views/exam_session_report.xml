@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+        id="exam_session_report"
+        model="maz_solutions.exam_session"
+        string="Exam Session report"
+        report_type="qweb-pdf"
+        name="maz_solutions.exam_session"
+        file="maz_solutions.exam_session"
+    />
+    <template id="exam_session">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="exam_session">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <br>
+                            <br>
+                                <table class="table table-condensed">
+                                    <tr> 
+                                        <th>Student</th>
+                                        <th>Exam</th>
+                                        <th>Date time start</th>
+                                        <th>Date time end</th>
+                                        <th>Mark</th>                    
+                                    </tr>
+                              
+                                    <tr>
+                                        <td>
+                                            <br>
+                                                <span t-field="exam_session.student"/>
+                                            </br>
+                                        </td>
+                                        <td>
+                                            <br>
+                                                <span t-field="exam_session.exam"/>
+                                            </br>
+                                        </td>
+                                        <td>
+                                            <br>
+                                                <span t-field="exam_session.dateTimeStart"/>
+                                            </br>
+                                        </td>
+                                        <td>
+                                            <br>
+                                                <span t-field="exam_session.dateTimeEnd"/>
+                                            </br>
+                                        </td>
+                                        <td>
+                                            <br>
+                                                <span t-field="exam_session.mark"/>
+                                            </br>
+                                        </td>
+                                    </tr>
+                                </table>  
+                            </br>
+                           </br>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

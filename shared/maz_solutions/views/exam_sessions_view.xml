@@ -8,19 +8,19 @@ and open the template in the editor.
 
 <odoo>
     <data>
-        <record model="ir.ui.view" id="exam_sessions_form_view">
+        <record model="ir.ui.view" id="exam_sessions_view">
             <field name="name">maz_solutions_exam_sessions.form</field>
             <field name="model">maz_solutions.exam_session</field>
             <field name="arch" type="xml">
-                <form string="Subject Form">
+                <form string="ExamSession Form">
                     <sheet>
                         <group colspan="2" col="2">
                             <h1>Exam Session Creation</h1>    
                             <group>
                                  <field name="exam"/>
                                  <field name="student"/>
-                                <field name="dateTimeStart"/>
-                                <field name="dateTimeEnd"/>
+                                <field name="dateTimeStart" />
+                                <field name="dateTimeEnd" />
                                 <field name="mark"/>
                             </group>        
                         </group>
