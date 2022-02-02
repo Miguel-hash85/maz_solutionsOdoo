@@ -10,7 +10,7 @@
     />
     <template id="exam_session">
         <t t-call="report.html_container">
-            <t t-foreach="docs" t-as="exam_session">
+            <t t-foreach="docs" t-as="e">
                 <t t-call="report.external_layout">
                     <div class="page">
                         <div class="oe_structure"/>
@@ -28,27 +28,27 @@
                                     <tr>
                                         <td>
                                             <br>
-                                                <span t-field="exam_session.student"/>
+                                                <span t-field="e.student"/>
                                             </br>
                                         </td>
                                         <td>
                                             <br>
-                                                <span t-field="exam_session.exam"/>
+                                                <span t-field="e.exam"/>
                                             </br>
                                         </td>
                                         <td>
                                             <br>
-                                                <span t-field="exam_session.dateTimeStart"/>
+                                                <span t-field="e.dateTimeStart"/>
                                             </br>
                                         </td>
                                         <td>
                                             <br>
-                                                <span t-field="exam_session.dateTimeEnd"/>
+                                                <span t-field="e.dateTimeEnd"/>
                                             </br>
                                         </td>
                                         <td>
                                             <br>
-                                                <span t-field="exam_session.mark"/>
+                                                <span t-field="e.mark"/>
                                             </br>
                                         </td>
                                     </tr>
