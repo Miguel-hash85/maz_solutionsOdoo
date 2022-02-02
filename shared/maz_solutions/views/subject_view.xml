@@ -55,10 +55,20 @@ and open the template in the editor.
             <field name="name">maz_solutions_subject.tree</field>
             <field name="model">maz_solutions.subject</field>
             <field name="arch" type="xml">
+                
                 <tree string="Subject List">
                     <field name="name"/>
                     <field name="total_hours"/>
                 </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="subject_search_view">
+            <field name="name">subject.search</field>
+            <field name="model">maz_solutions.subject</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
             </field>
         </record>
     </data>

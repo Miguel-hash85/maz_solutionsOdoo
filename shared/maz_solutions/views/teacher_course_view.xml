@@ -37,13 +37,22 @@ and open the template in the editor.
             <field name="name">maz_solutions_teacher_course.list</field>
             <field name="model">maz_solutions.teacher_course</field>
             <field name="arch" type="xml">
-                <tree string="Teacher Course List">
+                <tree string="Teacher Course List">                  
                     <field name="name"/>
                     <field name="teacher"/>
                     <field name="date_Start"/>
                     <field name="date_End"/>
                 </tree>
             </field> 
+        </record>
+        <record model="ir.ui.view" id="teacher_course_search_view">
+            <field name="name">teacher_course.search</field>
+            <field name="model">maz_solutions.teacher_course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
         </record>
     </data>
 </odoo>

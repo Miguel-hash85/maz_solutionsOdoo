@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<odoo>
+    <data>
+        <report
+            id="student_report"
+            model="maz_solutions.student"
+            string="Admin Student Report"
+            report_type="qweb-pdf"
+            name="maz_solutions.admin_teacher_course_report"
+            file="maz_solutions.admin_teacher_course_report"
+        />
+        <template id="admin_student_report">
+            <t t-call="report.html_container">
+                <t t-as="student" t-foreach="docs">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <div class="oe_structure"/>
+                            <br>
+                                <br>
+                                    <br>
+                                        <table class="table table-condensed">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Birth Date</th>
+                                                <th>Year</th>
+                                                <th>Course</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                        <span t-field="student.name"/>
+                                                    </br>
+                                                </td>
+                                                <td>
+                                                    <br> 
+                                                        <span t-field="student.birthDate"/>
+                                                    </br>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                        <span t-field="teacherCourse.year"/>
+                                                    </br>
+                                                </td>
+                                                <td>
+                                                    <br> 
+                                                        <span t-field="teacherCourse.course"/>
+                                                    </br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </br>
+                                </br>
+                            </br>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data> 
+</odoo>

@@ -28,7 +28,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'report'],
 
     # always loaded
     'data': [
@@ -40,6 +40,8 @@
         'views/subject_view.xml',
         'views/admin_teacher_view.xml',
         'views/teacher_course_view.xml',
+        'report/teacher_admin_course_report.xml',
+        'report/student_course_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
