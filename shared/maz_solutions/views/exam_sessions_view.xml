@@ -12,20 +12,42 @@ and open the template in the editor.
             <field name="name">maz_solutions_exam_sessions.form</field>
             <field name="model">maz_solutions.exam_session</field>
             <field name="arch" type="xml">
-                <form string="Subject Form">
+                <form string="ExamSession Form">
                     <sheet>
                         <group colspan="2" col="2">
                             <h1>Exam Session Creation</h1>    
                             <group>
-                                 <field name="exam"/>
-                                 <field name="student"/>
-                                <field name="dateTimeStart"/>
-                                <field name="dateTimeEnd"/>
-                                <field name="mark"/>
+                                <field name="exam" String="Exam"/>
+                                <field name="student" String="Student name"/>
+                                <field name="dateTimeStart" String="Date Time Start" />
+                                <field name="dateTimeEnd" String="Date Time End"/>
+                                <field name="mark" String="Mark"/>
                             </group>        
                         </group>
                     </sheet>
                 </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="exam_session_tree_view">
+            <field name="name">maz_solutions_exam_session.list</field>
+            <field name="model">maz_solutions.exam_session</field>
+            <field name="arch" type="xml">
+                <tree string="Exam Session List">
+                    <field name="exam" String="Exam"/>
+                    <field name="student" String="Student name"/>
+                    <field name="dateTimeStart" String="Date Time Start"/>
+                    <field name="dateTimeEnd" String="Date Time End"/>
+                    <field name="mark" String="Mark"/>
+                </tree>
+            </field> 
+        </record>
+        <record model="ir.ui.view" id="exam_session_search_view">
+            <field name="name">exam_session.search</field>
+            <field name="model">maz_solutions.exam_session</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="student"/>
+                </search>
             </field>
         </record>
     </data>
