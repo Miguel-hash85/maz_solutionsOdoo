@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_maz_solutions_maz_solutions,maz_solutions.maz_solutions,model_maz_solutions_maz_solutions,,1,0,0,0
+ir_teacher_access,ir_teacher_group_erp_manager,model_maz_solutions_teacher,admin_teacher_management_group,1,1,1,1
+ir_student_access,ir_student_group_erp_manager,model_maz_solutions_student,admin_student_management_group,1,1,1,1
+ir_exam_session_access,ir_exam_session_fields group_erp_manager,model_maz_solutions_exam_session,teacher_exam_session_manager_group,1,1,1,1

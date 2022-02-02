@@ -21,7 +21,6 @@ class  TeacherCourse(models.Model):
         for record in self:
             if record.date_Start > record.date_End:
                raise exceptions.ValidationError("The date end has to be at least, a day after date_start")
-             
     @api.constrains('name')
     def _check_name_is_not_empty(self):
         for record in self:
@@ -29,10 +28,19 @@ class  TeacherCourse(models.Model):
                 raise exceptions.ValidationError("The name has to have a value")         
     @api.onchange('name')
     def _validation_name_length(self):
-        if(len(str(self.name))) > 50:
+        if len(str(self.name)) > 50:
             return {
                 'warning': {
                     'title': "Maximun limit arrive",
                     'message': "You have reached the maximum character limit",
                 },
             }
+    @api.onchange('date_Start','date_End')
+    def _validation_dates(self):
+        if self.date_Start == self.date_End:
+            return {
+                'warning': {
+                    'title': "Dates Validation",
+                    'message': "The date start must be before the date end",
+                },
+            }        

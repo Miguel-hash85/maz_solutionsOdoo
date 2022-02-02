@@ -34,10 +34,3 @@ class ExamSession (models.Model):
             if record.mark < 0:
                 raise ValidationError("Sorry, mark should not be lower than 0")
     
-    @api.onchange('dateTimeStart')
-    def _add_hours(self):
-        DATETIME_FORMAT = "%d-%m-%Y %H:%M:%S"
-        dateTimeStart = datetime.strptime(date_field1, DATETIME_FORMAT)
-        dateTimeStart = datetime.strptime(self.dateTimeStart, DATETIME_FORMAT)
-        self.dateTimeEnd=dateTimeStart + relativedelta(hours=2, minutes=30)
-        

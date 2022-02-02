@@ -28,4 +28,21 @@ class  Subject(models.Model):
         for record in self:
             if (not (record.name and record.name.strip())):
                  raise exceptions.ValidationError("The name has to have a value")       
-    
+    @api.onchange('total_hours')
+    def _validation_total_hours_length(self):
+        if self.total_hours < 50:
+            return {
+                'warning': {
+                    'title': "Invalid salary",
+                    'message': "The minimum total hours for a subject is 50",
+                },
+            }
+    @api.onchange('name')
+    def _validation_name_length(self):
+        if len(str(self.name)) > 50:
+            return {
+                'warning': {
+                    'title': "Maximun limit arrive",
+                    'message': "You have reached the maximum character limit",
+                },
+            }        

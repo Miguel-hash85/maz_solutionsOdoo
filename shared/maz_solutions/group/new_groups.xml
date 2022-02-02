@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<openerp>
+    <data>
+        <record model="ir.module.category" id="admin_teacher_manager_module">
+            <field name="name">Admin teacher managers</field>
+            <field name="description">Group that manages the teachers of the app</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="admin_teacher_management_group" model="res.groups">
+            <field name="name">Admin teacher managers</field>
+            <field name="comment">Group that manages the teachers of the app</field>
+            <field name="category_id" ref="admin_teacher_manager_module"/>
+        </record> 
+        <record model="ir.module.category" id="admin_student_manager_module">
+            <field name="name">Admin student managers</field>
+            <field name="description">Group that manages the student of the app</field>
+            <field name="sequence">10</field>
+        </record>  
+        <record id="admin_student_management_group" model="res.groups">
+            <field name="name">Admin student managers</field>
+            <field name="comment">Group that manages the student of the app</field>
+            <field name="category_id" ref="admin_student_manager_module"/>
+        </record>
+        <record model="ir.module.category" id="teacher_exam_session_manager_module">
+            <field name="name">Teacher exam session manager</field>
+            <field name="description">Group that manages the exam sessions of the app.</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="teacher_exam_session_manager_group" model="res.groups">
+            <field name="name">Teacher exam session manager</field>
+            <field name="comment">Group that manages the exam sessions of the app</field>
+            <field name="category_id" ref="teacher_exam_session_manager_module"/>
+        </record>       
+    </data>
+</openerp>
