@@ -27,4 +27,12 @@ class  TeacherCourse(models.Model):
         for record in self:
             if (not (record.name and record.name.strip())):
                 raise exceptions.ValidationError("The name has to have a value")         
-    
+    @api.onchange('name')
+    def _validation_name_length(self):
+        if(len(str(self.name))) > 50:
+            return {
+                'warning': {
+                    'title': "Maximun limit arrive",
+                    'message': "You have reached the maximum character limit",
+                },
+            }

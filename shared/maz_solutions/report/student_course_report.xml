@@ -7,16 +7,16 @@ and open the template in the editor.
 <odoo>
     <data>
         <report
-            id="teacher_report"
-            model="maz_solutions.teacher_course"
-            string="Admin Teacher Course Report"
+            id="student_report"
+            model="maz_solutions.student"
+            string="Admin Student Report"
             report_type="qweb-pdf"
             name="maz_solutions.admin_teacher_course_report"
             file="maz_solutions.admin_teacher_course_report"
         />
-        <template id="admin_teacher_course_report">
+        <template id="admin_student_report">
             <t t-call="report.html_container">
-                <t t-as="teacherCourse" t-foreach="docs">
+                <t t-as="student" t-foreach="docs">
                     <t t-call="report.external_layout">
                         <div class="page">
                             <div class="oe_structure"/>
@@ -26,29 +26,29 @@ and open the template in the editor.
                                         <table class="table table-condensed">
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Date Start</th>
-                                                <th>Date End</th>
-                                                <th>Teacher</th>
+                                                <th>Birth Date</th>
+                                                <th>Year</th>
+                                                <th>Course</th>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <br>
-                                                        <span t-field="teacherCourse.name"/>
+                                                        <span t-field="student.name"/>
                                                     </br>
                                                 </td>
                                                 <td>
                                                     <br> 
-                                                        <span t-field="teacherCourse.date_Start"/>
+                                                        <span t-field="student.birthDate"/>
                                                     </br>
                                                 </td>
                                                 <td>
                                                     <br>
-                                                        <span t-field="teacherCourse.date_End"/>
+                                                        <span t-field="teacherCourse.year"/>
                                                     </br>
                                                 </td>
                                                 <td>
                                                     <br> 
-                                                        <span t-field="teacherCourse.teacher"/>
+                                                        <span t-field="teacherCourse.course"/>
                                                     </br>
                                                 </td>
                                             </tr>

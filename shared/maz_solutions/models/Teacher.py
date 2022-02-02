@@ -21,5 +21,13 @@ class Teacher (models.Model):
         for record in self:
             if record.salary <= 0:
                 raise exceptions.ValidationError("The salary must be positive")
-    
+    @api.onchange('salary')
+    def _validation_name_length(self):
+        if not len(str(self.salary)) > 5:
+            return {
+                'warning': {
+                    'title': "Invalid salary",
+                    'message': "The minimum salary is 100",
+                },
+            }
     
