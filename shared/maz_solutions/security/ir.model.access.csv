@@ -2,3 +2,6 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 ir_teacher_access,ir_teacher_group_erp_manager,model_maz_solutions_teacher,admin_teacher_management_group,1,1,1,1
 ir_student_access,ir_student_group_erp_manager,model_maz_solutions_student,admin_student_management_group,1,1,1,1
 ir_exam_session_access,ir_exam_session_fields group_erp_manager,model_maz_solutions_exam_session,teacher_exam_session_manager_group,1,1,1,1
+ir_teacher_read,ir_teacher_read_manager,model_maz_solutions_teacher,,1,0,0,0
+ir_student_read,ir_student_read_manager,model_maz_solutions_student,,1,0,0,0
+ir_exam_session_read,ir_exam_session_read_manager,model_maz_solutions_exam_session,,1,0,0,0

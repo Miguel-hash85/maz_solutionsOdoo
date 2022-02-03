@@ -45,9 +45,9 @@ and open the template in the editor.
                 </tree>
             </field> 
         </record>
-        <record model="ir.ui.view" id="student_search_view">
-            <field name="name">student.search</field>
-            <field name="model">maz_solutions.student</field>
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">course.search</field>
+            <field name="model">maz_solutions.course</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>                
