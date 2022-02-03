@@ -11,10 +11,10 @@ and open the template in the editor.
             model="maz_solutions.student"
             string="Admin Student Report"
             report_type="qweb-pdf"
-            name="maz_solutions.admin_teacher_course_report"
-            file="maz_solutions.admin_teacher_course_report"
+            name="maz_solutions.admin_student_course_report"
+            file="maz_solutions.admin_student_course_report"
         />
-        <template id="admin_student_report">
+        <template id="admin_student_course_report">
             <t t-call="report.html_container">
                 <t t-as="student" t-foreach="docs">
                     <t t-call="report.external_layout">
@@ -43,12 +43,12 @@ and open the template in the editor.
                                                 </td>
                                                 <td>
                                                     <br>
-                                                        <span t-field="teacherCourse.year"/>
+                                                        <span t-field="student.year"/>
                                                     </br>
                                                 </td>
                                                 <td>
                                                     <br> 
-                                                        <span t-field="teacherCourse.course"/>
+                                                        <span t-field="student.course"/>
                                                     </br>
                                                 </td>
                                             </tr>
