@@ -40,8 +40,13 @@
         'views/subject_view.xml',
         'views/admin_teacher_view.xml',
         'views/teacher_course_view.xml',
+        'views/exam_sessions_view.xml',
+        'views/exam_view.xml',
         'report/teacher_admin_course_report.xml',
         'report/student_course_report.xml',
+        'report/exam_session_report.xml', 
+        'group/new_groups.xml',
+        'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
     'demo': [

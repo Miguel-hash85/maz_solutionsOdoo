@@ -55,7 +55,6 @@ and open the template in the editor.
             <field name="name">maz_solutions_subject.tree</field>
             <field name="model">maz_solutions.subject</field>
             <field name="arch" type="xml">
-                
                 <tree string="Subject List">
                     <field name="name"/>
                     <field name="total_hours"/>

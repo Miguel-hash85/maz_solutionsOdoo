@@ -25,13 +25,11 @@ and open the template in the editor.
                                 <page string="Students">
                                     <field name="students"/>
                                 </page>
+                                <page string="Course Subjects">
+                                    <field name="course_subject"/>
+                                </page>
                             </notebook>
                         </group>                       
-                        <notebook>
-                            <page string="Course Subjects">
-                                <field name="course_subject"/>
-                            </page>
-                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -46,6 +44,15 @@ and open the template in the editor.
                     <field name="dateEnd"/>
                 </tree>
             </field> 
+        </record>
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">course.search</field>
+            <field name="model">maz_solutions.course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>                
+                </search>
+            </field>
         </record>
     </data>
 </odoo>

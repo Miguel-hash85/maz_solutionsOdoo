@@ -22,7 +22,7 @@ class Teacher (models.Model):
             if record.salary <= 0:
                 raise exceptions.ValidationError("The salary must be positive")
     @api.onchange('salary')
-    def _validation_name_length(self):
+    def _validation_salary_length(self):
         if not len(str(self.salary)) > 5:
             return {
                 'warning': {
@@ -30,4 +30,13 @@ class Teacher (models.Model):
                     'message': "The minimum salary is 100",
                 },
             }
+    @api.onchange('name')
+    def _validation_name_length(self):
+        if(len(str(self.name))) > 50:
+            return {
+                'warning': {
+                    'title': "Maximun limit arrive",
+                    'message': "You have reached the maximum character limit",
+                },
+            }        
     
